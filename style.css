@@ -13,7 +13,7 @@ h1 {
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   text-transform: uppercase;
   color: rgb(228, 161, 62);
-  font-size: 80px;
+  font-size: 5em;
   animation: fontupdown 1s ease-in-out infinite alternate;
 }
 
@@ -303,6 +303,7 @@ h1 {
   width: 30px;
   height: 27px;
   background: black;
+  -webkit-clip-path: polygon(3% 38%, 3% 49%, 69% 49%, 49% 37%);
   clip-path: polygon(3% 38%, 3% 49%, 69% 49%, 49% 37%);
 }
 
@@ -421,6 +422,7 @@ h1 {
   width: 20%;
   height: 20%;
   background: black;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(-50deg);
   z-index: 1;
@@ -433,6 +435,7 @@ h1 {
   width: 20%;
   height: 20%;
   background: black;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(-35deg);
   z-index: 1;
@@ -445,6 +448,7 @@ h1 {
   width: 20%;
   height: 20%;
   background: black;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(60deg);
   z-index: 1;
@@ -457,6 +461,7 @@ h1 {
   width: 20%;
   height: 20%;
   background: black;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(70deg);
   z-index: 1;

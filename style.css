@@ -5,6 +5,31 @@ body {
   margin: 0;
 }
 
+h1 {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  text-transform: uppercase;
+  color: rgb(228, 161, 62);
+  font-size: 80px;
+  animation: fontupdown 1s ease-in-out infinite alternate;
+}
+
+@keyframes fontupdown {
+  from {
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
 .container {
   position: absolute;
   top: 50%;
@@ -12,7 +37,8 @@ body {
   transform: translate(-50%, -50%);
   width: 380px;
   height: 380px;
-  border: 35px solid white;
+  /* border: 20px solid white; */
+  /*  box-shadow: inset 0px 0px 30px 8px white; */
   border-radius: 50%;
 }
 
@@ -178,31 +204,46 @@ body {
   height: 5px;
   border-radius: 70% / 120%;
   transform-origin: 50%;
-  animation: blink 2s infinite;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    transform: scale(1, 0.05);
-  }
-  5%,
-  95% {
-    transform: scale(1, 1);
-  }
 }
 
 .eye--left {
   left: 25%;
+  transform: rotate(5deg);
+  animation: blinkleft 2s infinite;
 }
 
 .eye--right {
   right: 25%;
+  transform: rotate(-5deg);
+  animation: blinkright 2s infinite;
+}
+
+@keyframes blinkleft {
+  0%,
+  100% {
+    transform: scale(1, 0.05) rotate(5deg);
+  }
+  5%,
+  95% {
+    transform: scale(1, 1) rotate(5deg);
+  }
+}
+
+@keyframes blinkright {
+  0%,
+  100% {
+    transform: scale(1, 0.05) rotate(-5deg);
+  }
+  5%,
+  95% {
+    transform: scale(1, 1);
+    transform: scale(1, 1) rotate(-5deg);
+  }
 }
 
 .mouth {
   position: absolute;
-  top: 70%;
+  top: 77%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #200503;
@@ -239,7 +280,7 @@ body {
 
 .eyeydetail {
   position: absolute;
-  top: 46%;
+  top: 47.5%;
   width: 3px;
   height: 1px;
   border-radius: 50% 45% 50% 50% / 50% 35% 50% 50%;
@@ -247,13 +288,13 @@ body {
 }
 
 .detail--left {
-  left: 37%;
-  transform: rotate(30deg) scale(-1, 1);
+  left: 36%;
+  transform: rotate(15deg) scale(-1, 1);
 }
 
 .detail--right {
-  right: 37%;
-  transform: rotate(-30deg);
+  right: 36%;
+  transform: rotate(-15deg);
 }
 
 .brow {
@@ -332,22 +373,23 @@ body {
   }
 }
 
-/* .pants {
+.pants {
   position: absolute;
   bottom: -1%;
   left: -1%;
-  background-color: black;
+  background-color: rgb(48, 29, 14);
   border: 1px solid black;
   width: 100px;
   height: 55px;
   border-radius: 0 0 60% 60% / 0 0 100% 100%;
+  z-index: 3;
 }
 
 .legpant {
   position: absolute;
   width: 31px;
   height: 40px;
-  background-color: black;
+  background-color: rgb(48, 29, 14);
   border: 1px solid black;
   border-radius: 50% 50% 0 0 / 30% 30% 0 0;
 }
@@ -358,7 +400,7 @@ body {
 
 .pant--right {
   right: -5%;
-} */
+}
 
 .hairdo {
   position: absolute;
@@ -418,4 +460,43 @@ body {
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   transform: rotate(70deg);
   z-index: 1;
+}
+
+img {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, -50%);
+  width: 180px;
+  height: 140px;
+  z-index: 3;
+}
+
+.frame {
+  position: absolute;
+  top: 38%;
+  width: 24px;
+  height: 16px;
+  border: 2px solid rgb(29, 13, 3);
+}
+
+.frame--left {
+  left: 18%;
+  border-radius: 35% 40% 50% 50% / 35% 40% 70% 70%;
+}
+
+.frame--right {
+  right: 18%;
+  border-radius: 40% 35% 50% 50% / 40% 35% 70% 70%;
+}
+
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 4px;
+  box-shadow: 0 -2px 0 0 rgb(29, 13, 3);
+  border-radius: 50%;
 }

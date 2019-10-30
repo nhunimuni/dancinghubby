@@ -22,7 +22,7 @@ body {
   left: 50%;
   width: 100px;
   height: 150px;
-  background-color: rgb(153, 118, 76);
+  background-color: rgb(153, 119, 77);
   border-radius: 50% / 30%;
   border: 1px solid black;
   transform-origin: center center;
@@ -284,6 +284,10 @@ body {
   width: 100px;
   height: 55px;
   border-radius: 0 0 3px 3px;
+  background-image: url("adererror.png");
+  background-position: 80% 25%;
+  background-size: 20%;
+  background-repeat: no-repeat;
   z-index: 3;
 }
 
